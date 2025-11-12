@@ -23,6 +23,8 @@ from src.models.app_models import (
     MAIN_WINDOW_ICON_PATH,
     BUTTON_FILMS_ICON_PATH,
     BUTTON_SERIES_ICON_PATH,
+    BUTTON_MEDIA_INFO_ICON_PATH,
+    BUTTON_SETTINGS_ICON_PATH,
 )
 
 MAIN_SCRIPT = 'src/main.py'  # Entry point principale dell'applicazione
@@ -72,6 +74,8 @@ def add_icon_resources(cmd: list, separator: str) -> None:
         (MAIN_WINDOW_ICON_PATH, "Main window icon"),
         (BUTTON_FILMS_ICON_PATH, "Films button icon"),
         (BUTTON_SERIES_ICON_PATH, "Series button icon"),
+        (BUTTON_MEDIA_INFO_ICON_PATH, "Media Info button icon"),
+        (BUTTON_SETTINGS_ICON_PATH, "Settings button icon"),
     ]
 
     for icon_relative_path, description in icon_paths:
