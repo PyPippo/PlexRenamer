@@ -1,0 +1,3 @@
+PySide6>=6.9.3
+pyinstaller>=6.16.0
+pymediainfo>=6.1.0
