@@ -43,7 +43,7 @@ A Windows desktop application that renames movies and TV series following Plex n
 
 ## ⬇️ Download
 
-**[📦 Download Latest Release](https://github.com/username/plexrenamer/releases/latest)**
+**[📦 Download Latest Release](https://github.com/PyPippo/PlexRenamer/releases/latest)**
 
 ### Installation Options
 
@@ -64,7 +64,7 @@ A Windows desktop application that renames movies and TV series following Plex n
 
 #### Option 2: Portable Version
 
-1. Download `PlexRenamer_Portable_v0.9.0.zip` from the [Releases](https://github.com/username/plexrenamer/releases) page
+1. Download `PlexRenamer_Portable_v0.9.0.zip` from the [Releases](https://github.com/PyPippo/PlexRenamer/releases) page
 2. Extract the ZIP file to your preferred location
 3. Run `PlexRenamer.exe` from the extracted folder
 
