@@ -1,133 +1,111 @@
-# File Renamer - Media File Normalization Tool
+# PlexRenamer
 
-A PySide6-based desktop application for standardizing video file names for movies and TV series.
+A Windows desktop application that renames movies and TV series following Plex naming conventions, with inline editing and real-time validation.
 
-## Features
+**Automatically normalize video file names for Plex Media Server**
 
-### 🎬 Movie Renaming
+---
 
-- Batch process multiple movie files
-- Auto-extract year from filename
-- Standardized format: `Movie Title (Year) - extras.mkv`
-- Support for various video formats
+## 🎯 Key Features
 
-### 📺 Series Renaming
+- 🎬 **Movie Renaming** - Format: `Movie Title (Year) - extras.mkv`
+- 📺 **TV Series Renaming** - Format: `Show Title (Year) - S01E01 - Episode Name.mkv`
+- ✏️ **Inline Editing** - Edit directly in the preview table
+- ✅ **Real-time Validation** - Instant feedback on changes
+- 🔍 **Duplicate Detection** - Prevents naming conflicts
+- ⚠️ **File Conflict Protection** - Checks before overwriting
+- 📊 **Status Indicators** - Clear visual feedback for all files
+- 🎨 **Theme Support** - Automatic dark/light mode
 
-- Process entire season folders
-- Normalize episode numbering (S##E## format)
-- Single year prompt for all episodes
-- Format: `Show Title (Year) - S01E01 - Episode Name.mkv`
+---
 
-### ✨ Key Capabilities
+## 📸 Screenshots
 
-- **Inline Editing** - Fix problematic files directly in preview
-- **Real-time Validation** - Instant feedback on edits
-- **Duplicate Detection** - Prevents naming conflicts
-- **File Conflict Protection** - Checks before overwriting
-- **Smart Year Detection** - Auto-extracts from 1895 to present
-- **Status Feedback** - Clear visual indicators for all files
+### TV Series Processing
 
-## Installation
+![Series Renaming](src/assets/screenshots/screenschot_1.png)
 
-PlexRenamer is available in two formats: **Installer** (recommended) and **Portable** version.
+*Batch rename entire seasons with automatic episode detection*
 
-### Option 1: Windows Installer (Recommended)
+### Movie Editing with Inline Validation
 
-1. Download `PlexRenamer_Setup_v0.9.0.exe` from the releases
+![Movie Editing](src/assets/screenshots/screenschot_2.png)
+
+*Edit file names directly in the preview with real-time validation*
+
+### Rename Results
+
+![Rename Results](src/assets/screenshots/screenschot_3.png)
+
+*Clear status indicators show the outcome of each operation*
+
+---
+
+## ⬇️ Download
+
+**[📦 Download Latest Release](https://github.com/username/plexrenamer/releases/latest)**
+
+### Installation Options
+
+#### Option 1: Windows Installer (Recommended)
+
+1. Download `PlexRenamer_Setup_v0.9.0.exe` from the [Releases](https://github.com/username/plexrenamer/releases) page
 2. Run the installer and follow the setup wizard
 3. Choose installation directory (default: `C:\Program Files\PlexRenamer`)
 4. Optionally create desktop shortcut
 5. Launch PlexRenamer from Start Menu or desktop
 
 **Features:**
-- Automatic installation and uninstallation
-- Start Menu integration
-- Desktop shortcut option
-- Automatic cleanup of configuration files on uninstall (optional)
 
-### Option 2: Portable Version
+- ✅ Automatic installation and uninstallation
+- ✅ Start Menu integration
+- ✅ Desktop shortcut option
+- ✅ Automatic cleanup of configuration files on uninstall (optional)
 
-1. Download `PlexRenamer_Portable_v0.9.0.zip` from the releases
+#### Option 2: Portable Version
+
+1. Download `PlexRenamer_Portable_v0.9.0.zip` from the [Releases](https://github.com/username/plexrenamer/releases) page
 2. Extract the ZIP file to your preferred location
 3. Run `PlexRenamer.exe` from the extracted folder
 
 **Features:**
-- No installation required
-- Can run from USB drive
-- Completely self-contained
-- Perfect for testing or temporary use
 
-### Option 3: Run from Source (Developers)
+- ✅ No installation required
+- ✅ Can run from USB drive
+- ✅ Completely self-contained
+- ✅ Perfect for testing or temporary use
 
-**Requirements:**
-- Python 3.9+
-- PySide6 >= 6.9.3
+### System Requirements
 
-**Setup:**
+- **Operating System:** Windows 10/11 (64-bit)
+- **Disk Space:** ~150 MB
+- **RAM:** 256 MB minimum
+- **Additional Software:** None (all dependencies included)
 
-```bash
-# Clone or download the project
-cd "path/to/Renamer V 2.0"
+---
 
-# Install dependencies
-pip install -r requirements.txt
+## 🚀 Quick Start Guide
 
-# Run the application (Method 1 - Direct)
-python src/main.py
-
-# Run the application (Method 2 - Launcher)
-python run.py
-```
-
-### Building from Source
-
-To create your own executables and installer:
-
-```bash
-# Build executable and installer
-python scripts/build.py
-
-# Output:
-# - dist/PlexRenamer/PlexRenamer.exe (portable)
-# - installer/PlexRenamer_Setup_v0.9.0.exe (installer)
-```
-
-**Requirements for building:**
-- Python 3.9+
-- PyInstaller >= 6.16.0
-- Inno Setup 6 (for Windows installer)
-
-## Usage
-
-### Movie Workflow
+### Renaming Movies
 
 1. Click **"Add Movie 🎬"**
 2. Select one or more video files
-3. Review the preview (double-click to edit if needed)
+3. Review the preview (double-click any cell to edit)
 4. Click **"Apply Changes"** to rename
 5. Click **"Start Over"** for next batch
 
-### Series Workflow
+### Renaming TV Series
 
 1. Click **"Add Series 📺"**
 2. Select season folder (e.g., "Season 1")
-3. If year is missing, enter it when prompted
-4. Review the preview
+3. Enter the year when prompted (if missing)
+4. Review the preview (double-click to edit if needed)
 5. Click **"Apply Changes"** to rename
 6. Click **"Start Over"** for next season
 
-## Supported Formats
+---
 
-### Video Files
-
-`.mp4`, `.mkv`, `.avi`, `.mov`, `.wmv`, `.flv`, `.webm`, `.m4v`, `.mpg`, `.mpeg`
-
-### Episode Patterns
-
-- `S01E01`, `s01e01` (standard format)
-- `1x01`, `3x9` (alternative format)
-
-## File Status Indicators
+## 📋 File Status Indicators
 
 | Icon | Status | Description |
 |------|--------|-------------|
@@ -137,124 +115,140 @@ python scripts/build.py
 | ⏭️ | Already Normalized | File already in correct format |
 | ⚠️ | Duplicate | Duplicate filename detected |
 
-## Project Structure
+---
 
-```
-src/
-├── core/              # Business logic
-│   ├── file_analyzer.py    # File name parsing and formatting
-│   ├── media_info.py       # File metadata extraction
-│   └── _utility.py         # Helper functions
-├── gui/               # User interface
-│   ├── main_window.py      # Main application window
-│   ├── file_table.py       # Preview table with editing
-│   ├── status_bar.py       # Status display widget
-│   ├── buttons.py          # Custom button components
-│   └── dialogs.py          # User input dialogs
-├── models/            # Data structures
-│   ├── media_types.py      # Media type definitions
-│   └── gui_models.py       # GUI data models
-└── main.py            # Application entry point
+## 🎥 Supported Formats
 
-tests/
-├── test_real_world_data.py  # FileAnalyzer tests
-├── test_gui_components.py   # Component tests
-└── test_main_window.py      # Integration tests
-```
+### Video Files
 
-## Interface Guidelines
+`.mp4`, `.mkv`, `.avi`, `.mov`, `.wmv`, `.flv`, `.webm`, `.m4v`, `.mpg`, `.mpeg`
 
-The application follows comprehensive interface guidelines to ensure a consistent and professional user experience:
+### Episode Patterns Recognized
 
-- **Windows-standard button styles** with custom classes for different action types
-- **Themed appearance** with support for default, dark, and light themes
-- **Consistent color scheme** with semantic colors for different statuses
-- **Proper spacing and alignment** following UI best practices
-- **Clear separation** between structural properties (padding, fonts) and themeable properties (colors)
+- `S01E01`, `s01e01` (standard format)
+- `1x01`, `3x9` (alternative format)
 
+### Valid Year Range
 
-## Design Principles
+- **Minimum:** 1895 (first commercial film)
+- **Maximum:** Current year
 
-### Validation Pipeline
+---
 
-1. **is_video_file()** - Verify file is a video
-2. **is_normalized()** - Check if already correct
-3. **FileAnalyzer** - Process and format name
+## ❓ FAQ & Support
 
-### Safety Features
+### How do I report a bug?
 
-- Pre-rename conflict detection
-- Duplicate name prevention
-- User confirmation before changes
-- No mixing movies and series in one session
+Open an issue on our [GitHub Issues](https://github.com/username/plexrenamer/issues) page with:
 
-### User Experience
+- PlexRenamer version
+- Windows version
+- Steps to reproduce
+- Screenshots (if applicable)
 
-- Color-coded status feedback
-- Inline editing with live validation
-- Batch year input for series
-- Clear error messages
+### Can I undo renames?
 
-## Development
+Currently, there's no built-in undo feature. This is planned for v1.0. Always review the preview carefully before applying changes.
 
-### Running Tests
+### Does it work with nested folders?
+
+No, the app scans flat folders only. Recursive subfolder processing is planned for a future release.
+
+### What happens to my original files?
+
+Files are renamed in place. No copies are made. The original filename is lost unless you have a backup.
+
+---
+
+## 📚 Documentation
+
+- **[📖 User Guide](docs/USER_GUIDE.md)** (EN) - Detailed usage instructions
+- **[💻 Developer Documentation](docs/DEVELOPMENT.md)** (EN) - For contributors and developers
+- **[🏗️ Project Architecture](docs/DEVELOPMENT.md#project-structure)** (EN) - Technical overview
+- **[📋 Release Notes v0.9.0](docs/plexrenamer_v0.9.0_EN.md)** (EN) | [(IT)](docs/plexrenamer_v0.9.0.md) - Complete release documentation
+
+---
+
+## 🛠️ For Developers
+
+Want to contribute or build from source? Check the [Developer Documentation](docs/DEVELOPMENT.md)
+
+### Quick Start
 
 ```bash
-# Test core components
-python tests/test_gui_components.py
+# Clone repository
+git clone https://github.com/username/plexrenamer.git
+cd plexrenamer
 
-# Test FileAnalyzer with real data
-python tests/test_real_world_data.py
+# Install dependencies
+pip install -r requirements.txt
 
-# Test button components
-python tests/test_buttons.py
+# Run the application
+python run.py
 ```
 
-### Code Quality
+### Build Executable
 
-- Full type hints throughout
-- Comprehensive docstrings
-- Modular, reusable components
-- Clean separation of concerns
+```bash
+# Build both installer and portable version
+python scripts/build.py
 
-## Configuration
+# Output:
+# - dist/PlexRenamer/PlexRenamer.exe (portable)
+# - installer/PlexRenamer_Setup_v0.9.0.exe (installer)
+```
 
-### Year Range
+**Build Requirements:**
 
-- Minimum: 1895 (first commercial film)
-- Maximum: Current year
-- Defined in: `src/models/gui_models.py::MIN_VALID_YEAR`
+- Python 3.9+
+- PyInstaller >= 6.16.0
+- Inno Setup 6 (for Windows installer)
 
-### Supported Episode Formats
+---
 
-Defined in: `src/core/file_analyzer.py::_extract_episode()`
+## 🗺️ Roadmap
 
-## Known Limitations
+### v0.9.0 (Current - Beta)
 
-- Flat folder scanning only (no recursive subfolder processing)
-- No undo functionality (yet)
-- Session-based (can't mix movies and series)
+- ✅ Movie and TV series renaming
+- ✅ Inline editing with validation
+- ✅ Duplicate detection
+- ✅ Theme support
+- ❌ Settings panel (coming in v1.0)
 
-## Future Enhancements
+### v1.0 (Planned)
 
+- [ ] Settings panel implementation
 - [ ] Undo/Redo functionality
-- [ ] Settings/preferences panel
-- [ ] Batch statistics
-- [ ] Theme customization
 - [ ] Rename history log
+- [ ] Custom year range configuration
+
+### Future Versions
+
+- [ ] Recursive folder processing
+- [ ] Batch statistics
 - [ ] File preview pane
 - [ ] Advanced filtering options
-- [ ] Recursive folder processing
 
-## License
+---
 
-This project is for educational and personal use.
+## 📜 License
 
-## Credits
+Educational and Personal Use
 
-Built with PySide6 (Qt for Python)
+---
+
+## 🙏 Credits
+
+**Built with:**
+
+- [PySide6](https://www.qt.io/qt-for-python) - Qt for Python framework
+- [PyInstaller](https://pyinstaller.org/) - Executable packaging
+- [Inno Setup](https://jrsoftware.org/isinfo.php) - Windows installer
+
+**Developer:** Qoder Project
 
 ---
 
 **Version:** 0.9.0
-**Status:** Beta - Settings Pending ⚙️
+**Status:** Beta - Fully Functional (Settings Panel Coming in v1.0) ⚙️

@@ -8,7 +8,7 @@ build/
 *.spec
 
 # Documentation folder (excluded from repository)
-docs/
+docs/local_docs/
 
 # Application configuration (user-specific)
 config/
