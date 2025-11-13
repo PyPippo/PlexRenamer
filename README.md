@@ -49,7 +49,7 @@ A Windows desktop application that renames movies and TV series following Plex n
 
 #### Option 1: Windows Installer (Recommended)
 
-1. Download `PlexRenamer_Setup_v0.9.0.exe` from the [Releases](https://github.com/username/plexrenamer/releases) page
+1. Download `PlexRenamer_Setup_v0.9.0.exe` from the [Releases](https://github.com/PyPippo/PlexRenamer/releases) page
 2. Run the installer and follow the setup wizard
 3. Choose installation directory (default: `C:\Program Files\PlexRenamer`)
 4. Optionally create desktop shortcut
@@ -139,7 +139,7 @@ A Windows desktop application that renames movies and TV series following Plex n
 
 ### How do I report a bug?
 
-Open an issue on our [GitHub Issues](https://github.com/username/plexrenamer/issues) page with:
+Open an issue on our [GitHub Issues](https://github.com/PyPippo/PlexRenamer/issues) page with:
 
 - PlexRenamer version
 - Windows version
@@ -177,7 +177,7 @@ Want to contribute or build from source? Check the [Developer Documentation](doc
 
 ```bash
 # Clone repository
-git clone https://github.com/username/plexrenamer.git
+git clone https://github.com/PyPippo/PlexRenamer.git
 cd plexrenamer
 
 # Install dependencies
